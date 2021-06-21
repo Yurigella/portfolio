@@ -105,11 +105,12 @@
     padding: 16px;
     color: var(--color-white);
     transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
   }
 
 #navbar.navbar--dark{
   background-color: var(--color-purple);
-  padding: 12px;
+  padding: 8px;
 }
 .navbar__menu{
   display: flex;
