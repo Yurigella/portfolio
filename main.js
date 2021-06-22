@@ -22,8 +22,15 @@ navbarMenu.addEventListener('click', (event)=> {
     return;
   }
   //console.log(event.target.dataset.link);
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
 })
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=> {
+  navbarMenu.classList.toggle('open');
+});
 
 // Handle click on "Contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
@@ -38,7 +45,7 @@ document.addEventListener('scroll', ()=> {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
-// Show "arrow yp" button when scrolling down
+// Show "arrow up" button when scrolling down
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', ()=> {
   if(window.scrollY > homeHeight / 2){
